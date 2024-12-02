@@ -36,18 +36,17 @@
 			  <a class="nav-link" href="about.html">About</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="pricing.html">Pricing</a>
+			  <a class="nav-link active" aria-current="page" href="pricing.html">Pricing</a>
 			</li>
 			<!-- Learn Dropdown -->
 			<li class="nav-item dropdown">
 			  <a
-				class="nav-link dropdown-toggle active"
+				class="nav-link dropdown-toggle"
 				href="#"
 				id="navbarLearn"
 				role="button"
 				data-bs-toggle="dropdown"
 				aria-expanded="false"
-				aria-current="page" 
 			  >
 				Learn
 			  </a>
@@ -66,60 +65,53 @@
 	  </div>
 	</nav>
 	<!-- End Navigation -->
-
 	
 	<!-- Main Content -->
-	<div class="col-md-10 mx-auto col-lg-5" style="margin-top: 100px; margin-bottom: 25px">
-		<form class="p-4 p-md-5 border rounded-3 bg-light">
-			<h2 class="mb-4 text-center">Create Your FinEd Account</h2>
+	<div class="container py-3" style="margin-top: 100px; margin-bottom: 25px">
+	  <header>
+		<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+		  <h1 class="display-4 fw-normal">Pricing</h1>
+		  <p class="fs-5 text-muted">Take control of your financial future with exclusive lessons, interactive tools, and expert tips. Sign up for our Premium Plan to unlock even more resources designed to help teens like you become money-savvy.</p>
+		</div>
+	  </header>
 
-			<!-- User Name Field -->
-			<div class="form-floating mb-3">
-				<input type="text" class="form-control" id="floatingUsername" placeholder="Enter your username">
-				<label for="floatingUsername">Username</label>
+	  <main>
+		<div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
+		  <div class="col">
+			<div class="card mb-4 rounded-3 shadow-sm">
+			  <div class="card-header py-3">
+				<h4 class="my-0 fw-normal">Free Plan</h4>
+			  </div>
+			  <div class="card-body">
+				<h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+				<ul class="list-unstyled mt-3 mb-4">
+				  <li>Ads</li>
+				  <li>Limited Learning Content</li>
+				  <li>Limited Features</li>
+				</ul>
+				<button type="button" class="w-100 btn btn-lg btn-outline-primary" onclick="window.location.href='signup.html'">Sign up for free</button>
+			  </div>
 			</div>
-
-			<!-- Email Field -->
-			<div class="form-floating mb-3">
-				<input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
-				<label for="floatingEmail">Email Address</label>
+		  </div>
+		  <div class="col">
+			<div class="card mb-4 rounded-3 shadow-sm">
+			  <div class="card-header py-3">
+				<h4 class="my-0 fw-normal">Premium Plan</h4>
+			  </div>
+			  <div class="card-body">
+				<h1 class="card-title pricing-card-title">$5 - $15<small class="text-muted fw-light">/mo</small></h1>
+				<ul class="list-unstyled mt-3 mb-4">
+				  <li>No ads</li>
+				  <li>Additional Learning Content</li>
+				  <li>Advanced Features</li>
+				</ul>
+				<button type="button" class="w-100 btn btn-lg btn-primary" onclick="window.location.href='signup.html'">Get started</button>
+			  </div>
 			</div>
-
-			<!-- Password Field -->
-			<div class="form-floating mb-3">
-				<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-				<label for="floatingPassword">Password</label>
-			</div>
-
-			<!-- Confirm Password Field -->
-			<div class="form-floating mb-3">
-				<input type="password" class="form-control" id="floatingConfirmPassword" placeholder="Confirm Password">
-				<label for="floatingConfirmPassword">Confirm Password</label>
-			</div>
-
-			<!-- Terms of Service Checkbox -->
-			<div class="checkbox mb-3">
-				<label>
-					<input type="checkbox" value="agree" id="terms" required> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
-				</label>
-			</div>
-
-			<!-- Sign Up Button -->
-			<button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
-			<hr class="my-4">
-			<small class="text-muted">By signing up, you agree to the terms of use.</small>
-
-			<!-- Already have an account? Sign In link -->
-			<div class="mt-3 text-center">
-				<p>Already have an account?</p>
-				<button class="w-100 btn btn-lg btn-outline-secondary" type="button" onclick="window.location.href='../index.html'">Sign In</button>
-			</div>
-		</form>
-	</div>
-
-	
-	
-	
+		  </div>
+		</div>
+	  </main>
+	</div>	
 	<!-- End Main Content -->
 	
 	

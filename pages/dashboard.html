@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinEd</title>
+    <!-- Include Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	  <div class="container-fluid">
+		<!-- Logo -->
+		<a class="navbar-brand" href="../index.html">
+		  <img src="../img/fined_logo.png" alt="FinEd Logo" style="max-width: 50px; height: auto;">
+		</a>
+		<button
+		  class="navbar-toggler"
+		  type="button"
+		  data-bs-toggle="collapse"
+		  data-bs-target="#navbarCollapse"
+		  aria-controls="navbarCollapse"
+		  aria-expanded="false"
+		  aria-label="Toggle navigation"
+		>
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+		  <ul class="navbar-nav me-auto mb-2 mb-md-0">
+			<li class="nav-item">
+			  <a class="nav-link" href="../index.html">Home</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page"  href="about.html">About</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="pricing.html">Pricing</a>
+			</li>
+			<!-- Learn Dropdown -->
+			<li class="nav-item dropdown">
+			  <a
+				class="nav-link dropdown-toggle"
+				href="#"
+				id="navbarLearn"
+				role="button"
+				data-bs-toggle="dropdown"
+				aria-expanded="false"
+			  >
+				Learn
+			  </a>
+			  <ul class="dropdown-menu" aria-labelledby="navbarLearn">
+				<li><a class="dropdown-item" href="bank.html">What is a Bank?</a></li>
+				<li><a class="dropdown-item" href="checking.html">What is a Checking Account?</a></li>
+				<li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">What is a Savings Account?</a></li>
+				<li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">What is a Certificate Account?</a></li>
+				<li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">What is a Traditional IRA?</a></li>
+				<li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">What is a Roth IRA?</a></li>
+				<li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">What is a 401(k)?</a></li>
+			  </ul>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	<!-- End Navigation -->
+	
+	<!-- Main Content -->
+	<div class="container py-3" style="margin-top: 100px; margin-bottom: 25px">
+		<div class="container-fluid">
+		  <div class="row">
+			<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+			  <div class="position-sticky pt-3">
+				<ul class="nav flex-column">
+				  <li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#">
+					  <span data-feather="home"></span>
+					  Dashboard
+					</a>
+				  </li>
+				  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+					  <span>LEARNING PATHS</span>
+					  <a class="link-secondary" href="dashboard.html" aria-label="Add a new report">
+						<span data-feather="plus-circle"></span>
+					  </a>
+					</h6>
+				  <li class="nav-item">
+					<a class="nav-link" href="personal_finance.html">
+					  <span data-feather="file"></span>
+					  Personal Finanance
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">
+					  <span data-feather="shopping-cart"></span>
+					  Budgeting Basics
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">
+					  <span data-feather="users"></span>
+					  Savings and Setting Goals
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">
+					  <span data-feather="bar-chart-2"></span>
+					  Banking 101
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">
+					  <span data-feather="layers"></span>
+					  Credit Cards and Loans
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">
+					  <span data-feather="layers"></span>
+					  Building Credit
+					</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link disabled" href="#">
+					  <span data-feather="layers"></span>
+					  Investing for Beginners
+					</a>
+				  </li>
+				</ul>
+			  </div>
+			</nav>
+
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+			  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+				<h1 class="h2">Welcome Back John Doe</h1>
+				<div class="btn-toolbar mb-2 mb-md-0">
+				  <div class="btn-group me-2">
+					<button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.print()">Print</button>
+					<button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='../index.html'">Sign Out</button>
+				  </div>
+				</div>
+			  </div>
+			  
+			<div class="alert alert-dark alert-dismissible fade show" role="alert">
+				<h4 class="alert-heading">Psychology of Money</h4>
+				<p>What percentage of people do you think make purchases due to FOMO (Fear of Missing Out)?</p>
+				<hr>
+				<p class="mb-0">FOMO, or Fear of Missing Out, is when you feel anxious or left out because you think everyone else is having fun or doing something exciting, and you’re not part of it. It's like seeing your friends post pictures from a party or a cool event online and feeling like you’re missing out on something important or fun.</p>
+				<hr>
+				<p class="mb-0">Answer: 60% of people make purchases because of FOMO, mostly within 24 hours.</p>
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+			
+			<hr>
+			<h3>Lesson Progress</h3>
+				<div class="progress mb-3" style="height: 20px;">
+				  <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Personal Finance</div>
+				</div>
+				<div class="progress mb-3">
+				  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Budgeting Basics</div>
+				</div>
+				<div class="progress mb-3">
+				  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Banking 101</div>
+				</div>
+				<div class="progress mb-3">
+				  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Building Credit</div>
+				</div>
+			
+			<hr>
+			<div class="row">
+			  <div class="col-sm-6">
+				<div class="card">
+				  <div class="card-body">
+					<h5 class="card-title">Personal Finance</h5>
+					<p class="card-text">Learn how to manage your money effectively, from budgeting and saving to making smart financial decisions and preparing for the future.</p>
+					<a href="personal_finance.html" class="btn btn-primary">Launch</a>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-sm-6">
+				<div class="card">
+				  <div class="card-body">
+					<h5 class="card-title">Budgeting Basics</h5>
+					<p class="card-text">Learn how to track your income and expenses to manage your money wisely and avoid overspending</p>
+					<a href="#" class="btn btn-primary disabled">Launch</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
+			<hr>
+			<div class="row">
+			  <div class="col-sm-6">
+				<div class="card">
+				  <div class="card-body">
+					<h5 class="card-title">Saving and Setting Goals</h5>
+					<p class="card-text">Understand how to build savings and set financial goals for short- and long-term needs.</p>
+					<a href="#" class="btn btn-primary disabled">Launch</a>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-sm-6">
+				<div class="card">
+				  <div class="card-body">
+					<h5 class="card-title">Banking 101</h5>
+					<p class="card-text">Explore different types of bank accounts (checking, savings), how to use them, and why they’re important.</p>
+					<a href="#" class="btn btn-primary disabled">Launch</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
+			<hr>
+			<div class="row">
+			  <div class="col-sm-6">
+				<div class="card">
+				  <div class="card-body">
+					<h5 class="card-title">Credit Cards and Loans</h5>
+					<p class="card-text">Get familiar with how credit works, the pros and cons of credit cards, and how loans affect your finances.</p>
+					<a href="#" class="btn btn-primary disabled">Launch</a>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-sm-6">
+				<div class="card">
+				  <div class="card-body">
+					<h5 class="card-title">Building Credit</h5>
+					<p class="card-text">Learn how to build and manage good credit, and how it impacts your ability to borrow money in the future.</p>
+					<a href="#" class="btn btn-primary disabled">Launch</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
+			<hr>
+			<div class="row">
+			  <div class="col-sm-6">
+				<div class="card">
+				  <div class="card-body">
+					<h5 class="card-title">Investing for Beginners</h5>
+					<p class="card-text">Understand the basics of investing, how to start with small amounts, and the importance of long-term investing.</p>
+					<a href="#" class="btn btn-primary disabled">Launch</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			  
+			</main>
+		  </div>
+		</div>
+
+	</div>
+	<!-- End Main Content -->
+	
+	
+	<!-- Footer -->
+	<hr class="mb-0">
+	<footer class="footer mt-auto py-3 bg-light">
+	  <div class="container">
+		<span class="text-muted">&copy; 2024 FinEd. All rights reserved.</span>
+	  </div>
+	</footer>
+
+    <!-- Include Bootstrap JS and Popper.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script>
+    document.getElementById('download-pdf').addEventListener('click', function () {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      // Add content to the PDF (you can customize this)
+      doc.text('Financial Education for Teens', 10, 10);
+      doc.text('This content can be exported to a PDF document.', 10, 20);
+
+      // Save the PDF
+      doc.save('financial_education.pdf');
+    });
+  </script>
+</body>
+</html>

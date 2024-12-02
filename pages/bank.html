@@ -16,7 +16,15 @@
 		<a class="navbar-brand" href="../index.html">
 		  <img src="../img/fined_logo.png" alt="FinEd Logo" style="max-width: 50px; height: auto;">
 		</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+		<button
+		  class="navbar-toggler"
+		  type="button"
+		  data-bs-toggle="collapse"
+		  data-bs-target="#navbarCollapse"
+		  aria-controls="navbarCollapse"
+		  aria-expanded="false"
+		  aria-label="Toggle navigation"
+		>
 		  <span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
@@ -28,25 +36,30 @@
 			  <a class="nav-link" href="about.html">About</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link active" aria-current="page" href="bank.html">Bank</a>
+			  <a class="nav-link" href="pricing.html">Pricing</a>
 			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="checking.html">Checking</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link disabled" href="#">Savings</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link disabled" href="#">Certificate</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link disabled" href="#">Traditional IRA</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link disabled" href="#">Roth IRA</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link disabled" href="#">401(k)</a>
+			<!-- Learn Dropdown -->
+			<li class="nav-item dropdown">
+			  <a
+				class="nav-link dropdown-toggle active"
+				href="#"
+				id="navbarLearn"
+				role="button"
+				data-bs-toggle="dropdown"
+				aria-expanded="false"
+				aria-current="page" 
+			  >
+				Learn
+			  </a>
+			  <ul class="dropdown-menu" aria-labelledby="navbarLearn">
+				<li><a class="dropdown-item" href="bank.html">What is a Bank?</a></li>
+				<li><a class="dropdown-item" href="checking.html">What is a Checking Account?</a></li>
+				<li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">What is a Savings Account?</a></li>
+				<li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">What is a Certificate Account?</a></li>
+				<li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">What is a Traditional IRA?</a></li>
+				<li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">What is a Roth IRA?</a></li>
+				<li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">What is a 401(k)?</a></li>
+			  </ul>
 			</li>
 		  </ul>
 		</div>
@@ -122,10 +135,9 @@
 	</div>
 	</div>
 	</div>
-
-	<hr class="my-0">
 	
 	<!-- Footer -->
+	<hr class="my-0">
 	<footer class="footer mt-auto py-3 bg-light">
 	  <div class="container">
 		<span class="text-muted">&copy; 2024 FinEd. All rights reserved.</span>
